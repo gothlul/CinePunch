@@ -18,8 +18,8 @@ function SearchBar({
 }: SearchbarParametters,) {
 
   return (
-    <div className='flex shadow-sm p-1.5 rounded-sm text-xs items-center flex-1 justify-between bg-white'>
-        <input className='focus:outline-hidden p-0 ms-1' type='text' placeholder={placeholder} onChange={(e) => onChange(e.target.value)} value={term} />
+    <div className='flex shadow-sm p-1.5 pb-1.75 rounded-sm text-xs items-center flex-1 justify-between bg-white gap-2'>
+        <input className='focus:outline-hidden p-0 ms-0.5 flex-1' type='text' placeholder={placeholder} onChange={(e) => onChange(e.target.value)} value={term} />
         <span className="flex" onClick={term.trim() != ""?() => onChange(""):() => {}}><FontAwesomeIcon icon={term.trim() == ""?icon:faXmark} /></span>
     </div>
   )

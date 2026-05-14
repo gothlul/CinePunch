@@ -2,7 +2,7 @@ import { useState, type ReactNode } from 'react';
 import SearchBar from '../inputs/searchbar';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import UserCard from '../cards/user-card';
-import userImage from '../../assets/user-default-image.svg';
+import userImage from '../../../shared/assets/user-default-image.svg';
 
 type NavbarParametters = {
     imageSrc: string 
@@ -18,7 +18,7 @@ function Navbar({
     return (
     <nav className='flex items-center h-[10vh] max-h-100px justify-between py-5 min-w-3/4 max-w-9/10 gap-30'>
         <div className='flex items-center gap-15'>
-            <a>
+            <a href='\'>
                 <img src={imageSrc}/>
             </a>
 

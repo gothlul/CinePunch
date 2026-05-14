@@ -1,4 +1,4 @@
-import type { AgeRating } from '../../models/age-rating-model';
+import type { AgeRating } from '../../../core/models/age-rating-model';
 
 type AgeRatingParametters = {
   rating: AgeRating
