@@ -15,7 +15,7 @@ export default function DisplayPage(){
         <div>
             <div className='flex justify-center bg-[(--background-color)] shadow-lg/30'>
             <Navbar imageSrc={logo}>
-                <NavItem href="\search" icon={faLayerGroup}>Catgeorias</NavItem>
+                <NavItem href="\search" icon={faLayerGroup}>Categorias</NavItem>
                 <NavItem href="\display" icon={faFilm}>Em cartaz</NavItem>
             </Navbar>
             </div>

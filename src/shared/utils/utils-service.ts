@@ -14,7 +14,9 @@ export default class UtilsService{
             const randomIndex = Math.floor(Math.random() * allItems.length);
             const item = allItems[randomIndex];
 
-            selected.push(item);
+            if (!selected.includes(item)) {
+                selected.push(item);
+            }
         }
 
         return selected;

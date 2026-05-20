@@ -84,6 +84,15 @@ export default class Controller{
         return UtilsService.shuffle(mediaList);
     }
 
+    static async getNewMedias(): Promise<Media[]>{
+        const response = await fetch(`${this.api_url}/movie/now_playing?language=pt-BR`,{
+            headers: {
+                Authorization: `Bearer ${this.api_token}`
+            }
+        });
 
-    
+        const data = await response.json();
+
+        return data.results.map((movie: any) => Media.fromJson(JSON.stringify(movie))) as Media[];
+    }
 }

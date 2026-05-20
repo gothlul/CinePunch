@@ -13,7 +13,7 @@ export default class Media {
   title: string;
   description: string;
   poster: string;
-  ageRating: AgeRating | undefined;
+  ageRating: AgeRating;
   genres: Genre[];
   channels: Channel[];
   score: number | undefined;
@@ -56,7 +56,7 @@ export default class Media {
 
     return new Media(
       obj['id'],
-      obj['name'],
+      obj['name']??obj['title'],
       obj['overview'],
       obj['poster_path'],
       obj['release_date']??obj['first_air_date'],

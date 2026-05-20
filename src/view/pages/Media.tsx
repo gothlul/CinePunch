@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import logo from '../../shared/assets/logo.svg'
 import '../../shared/style/index.css'
 import Navbar from '../components/navbar/navbar'
@@ -9,7 +8,7 @@ import { faLayerGroup, faFilm } from "@fortawesome/free-solid-svg-icons";
 
 import UtilsService from '../../core/services/controller';
 
-export default function SearchPage(){
+export default function MediaPage(){
     const controller = new UtilsService();
 
     return (
