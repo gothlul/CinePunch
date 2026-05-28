@@ -1,7 +1,7 @@
-import Controller from "../services/controller";
-import rating, { type AgeRating } from "./age-rating-model"
-import Channel from "./channel-model"
-import Genre from "./genre-model"
+import Repository from "../../shared/repository/repository";
+import rating, { type AgeRating } from "./age-rating-model";
+import Channel from "./channel-model";
+import Genre from "./genre-model";
 
 export const MediaOptions = {
   movie: "movie",
@@ -61,7 +61,7 @@ export default class Media {
       obj['poster_path'],
       obj['release_date']??obj['first_air_date'],
       obj['ageRating']??rating.unknow,
-      obj['genres'] != null? obj['genres'].map((e: string) => Genre.fromJson(e)): obj['genre_ids'].map((e: number) => Controller.getCategoryById(e)),
+      obj['genres'] != null? obj['genres'].map((e: string) => Genre.fromJson(e)): obj['genre_ids'].map((e: number) => Repository.getCategoryById(e)),
       obj['networks'] != null? obj['networks'].map((e: string) => Channel.fromJson(e)): [],
       obj['seasons'] != null? MediaOptions.serie: MediaOptions.movie,
       obj['runtime'],

@@ -1,11 +1,11 @@
 import { useRef, useEffect, useCallback } from 'react';
 
-interface CarrocelParametters {
+interface CaroucelParametters {
   items: any[];
   renderItem: (item: any, index: number) => React.ReactNode;
 }
 
-export default function Carrocel({ items, renderItem }: CarrocelParametters) {
+export default function Caroucel({ items, renderItem }: CaroucelParametters) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const duplicated = [...items, ...items];
 
